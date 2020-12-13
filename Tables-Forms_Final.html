@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+	<title>Using Forms</title>
+    <link rel="stylesheet" type="text/css" href="table.css"/>
+	<script type="text/javascript" src="table1.js"></script>
+  </head>
+
+  <body>
+	<form action="order.html" onsubmit="return validateForm();" name = "myform">
+	
+		<div id="fullpage">
+		<h1 style="text-align:center;">Terry's Pizza Parlor</h1>
+		<h1 style="text-align:center;">Order a Pizza:</h1>
+
+	<table border="0">
+		<tr>
+			<td colspan="3"><img src="pizza.jpg" alt="Online Ordering"  width="700" height="300"></td> <!-- Heading picture -->
+
+		</tr>		<tr>
+			<td class="label_col">First Name:</td>
+			<td class="input_col"><input name="firstName" id="firstName" type="text" onblur="validateFirstName();"></td>
+			<td class="feedback_col"><span id="firstNamePrompt">&nbsp;</span></td>
+		</tr>
+		<tr>
+			<td class="label_col">Last Name:</td>
+			<td class="input_col"><input name="lastName" id="lastName" type="text" onblur="validateLastName()"></td>
+			<td class="feedback_col"><span id="lastNamePrompt">&nbsp;</span></td>
+		</tr>
+		<tr>
+			<td class="label_col">Phone Number:</td>
+			<td class="input_col"><input type="tel" name="phone" id="phone" onblur="validatePhone()" ></td>
+			<td class="feedback_col"><span id="phonePrompt">xxx-xxx-xxxx</span></td> <!-- either placeholder or prompt -->
+		</tr>
+		<tr>
+			<td class="label_col">Type:</td>
+			<!-- <td class="input_col"><input name="pizzaType" id="pizzaType" type="text"></td> -->
+			<td class="input_col">
+			<select id="pizzaType" input name="pizzaType">
+			<option value=cheese">Cheese</option>
+			<option value=Pepperoni">Pepperoni</option>
+			<option value=Sausage">Sausage</option>
+			<option value=Deluxe">Sausage</Deluxe>
+			</select>
+			</td>
+			<td class="feedback_col><span id="typePrompt"></span></td>
+			</tr>
+		<tr>
+			<td class="label_col">Order Quantity:</td>
+			<td class="input_col"><input name="quantity" id="quantity" type="number" value="1" min="1" max="5"></td> 
+			<!-- <td class="input_col"><input name="quantity" id="quantity" type="number" onblur="validateQuantity()"></td> -->
+			<td class="feedback_col"><span id="quantityPrompt">1&ndash;5</span></td>
+		</tr>
+		<tr>
+			<td class="label_col">Item Price:</td>
+			<td class="input_col"><input name="price" id="price" type="text" value="10.00" readonly onblur="validatePrice()"></td> 
+			<td class="feedback_col"><span id="pricePrompt">1&ndash;5</span></td>
+		</tr>
+		<tr>
+			<td><input type="radio" name = "size" value "Large" checked>Large</td>
+			<td><input type="radio" name = "size" value "Medium">Meduim</td>
+			<td><input type="radio" name = "size" value "Small">Small</td>
+		</tr>
+		<tr>
+			<td class="Button" id="Button" colspan="3"><input type="submit" value="Order Now"></td>
+			<!-- <td class="Button" id="Button" colspan="3"><span class="buttonBG" onclick="CalcOrder()">Order Now</span></td> -->
+		</tr>
+	</table>
+
+		<span id="orderConfirm">&nbsp;</span>
+		</div>	
+
+   </form>
+  </body>
+ 
+</html>

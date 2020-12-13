@@ -1,0 +1,38 @@
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: "Times New Roman", Times, serif;
+	font-size: large;
+	<!-- Background-image: url('pizza.png'); -->
+}
+table {
+	width:700px;
+	border-collapse: collapse;
+	talbe-layout: fixed;
+}
+td {
+	vertical-align: top;
+	padding: 5px;
+	word-wrap: break-word;
+}
+/* ID and classes */
+#fullpage {
+	margin: 50px;
+}
+.label_col {
+	text-align: right;
+}
+.input_col {
+	text-align: left;
+}
+.feedback_col {
+	text-align: center;
+	veritcal-align: middle;
+	color: lightGray;
+	font-size: small;
+}
+.Button {
+	margin: auto;
+	text-align: center;
+	width: 50px;
+}
